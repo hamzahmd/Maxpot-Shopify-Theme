@@ -1,0 +1,119 @@
+{%- style -%}
+.faq-description {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.faq-checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tabs {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 12px #4141416e;
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.tab-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: bold;
+  color: white;
+}	
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  background-color: white;
+  transition: all 0.5s ease;
+  color: black;
+}
+
+.tab-content p {
+  margin: 0; 
+}
+
+.faq-checkbox:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+{%- endstyle -%}
+<div class="page-width page-width--narrow">
+  <h4 class="main-page-title page-title h0">
+    {{ section.settings.faq_title | escape }}
+  </h4>
+  
+  {% if section.settings.faq_description %}
+    <div class="rte faq-description">
+      {{ section.settings.faq_description }}
+    </div>
+  {% endif %}
+  <div class="faq-container">
+    <div class="tabs">
+    	{% for block in section.blocks %}
+      		{% assign item = block.settings %}
+      		
+      		<div class="tab">
+      			<input type="checkbox" id="faq_checkbox_{{ forloop.index }}" class="faq-checkbox">
+        		<label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ item.question }}</label>
+        		<div class="tab-content">{{ item.answer }}</div>
+      		</div>
+      	{% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+	"name": "FAQ",
+	"tag": "section",
+	"class": "spaced-section",
+  "settings": [ 
+		{
+			"type": "text",
+			"id": "faq_title",
+			"default": "Frequently Asked Questions",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "faq_description",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"label": "Description"
+		}
+	],
+	"blocks": [
+		{
+			"name": "FAQ Item",
+			"type": "faq",
+			"settings": [
+				{
+					"type": "text",
+					"id": "question",
+					"label": "Question",
+					"default": "Do you have a question?"
+				},
+				{
+					"type": "richtext",
+					"id": "answer",
+					"label": "Answer",
+					"default": "<p>I have an answer</p>"
+				}
+			]
+		}
+	],
+	"presets": [
+		{ "name": "FAQ Block" }
+	]
+}
+{% endschema %}
