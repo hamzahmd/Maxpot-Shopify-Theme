@@ -73,10 +73,46 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "74d083b9-fa9a-4238-b6c1-85bf2fcb6580": {
+      "type": "tab",
+      "blocks": {
+        "04f53e20-b272-46e1-bb2c-d11adda22aec": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question1?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "28086446-a573-40ce-b652-2522624e790d": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question2?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iusto aspernatur ratione cum corrupti esse cupiditate. Aperiam qui autem dolore, laborum accusantium nostrum quisquam facilis sequi molestiae alias odit repellat accusamus, consectetur hic temporibus nemo asperiores sint. Rem dolor dolorem expedita! Harum eius velit aliquid temporibus eligendi. Earum, voluptate ad.<\/p>"
+          }
+        },
+        "a1e040fe-c9c7-4c2a-a4b2-d984360d8687": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question3?",
+            "answer": "<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti at quisquam quod corporis iusto tempore libero eveniet! Molestias suscipit exercitationem, minima laborum at quos odit odio facilis distinctio vero corrupti quod ex dolores magni debitis totam necessitatibus autem temporibus tempora nostrum facere repudiandae maxime esse. Inventore repudiandae natus, numquam molestiae corporis aspernatur rerum delectus minus accusamus harum vitae aliquam in deserunt accusantium cupiditate sunt ipsa! Voluptatem suscipit dignissimos illum odio vel ea voluptatum a aliquid cumque? Assumenda saepe magni quod dolores, sed similique voluptates voluptatem harum non aut sit earum maxime sint eveniet vero tempora fugit vel explicabo temporibus? Reiciendis.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "04f53e20-b272-46e1-bb2c-d11adda22aec",
+        "28086446-a573-40ce-b652-2522624e790d",
+        "a1e040fe-c9c7-4c2a-a4b2-d984360d8687"
+      ],
+      "settings": {
+        "faq_title": "Frequently Asked Questions",
+        "faq_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "74d083b9-fa9a-4238-b6c1-85bf2fcb6580"
   ]
 }
