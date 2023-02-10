@@ -35,7 +35,7 @@
   max-height: 0;
   padding: 0 1em;
   background-color: white;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   color: black;
 }
 
@@ -49,9 +49,9 @@
 }
 {%- endstyle -%}
 <div class="page-width page-width--narrow">
-  <h4 class="main-page-title page-title h0">
-    {{ section.settings.faq_title | escape }}
-  </h4>
+  <h2 class="main-page-title page-title h0">
+   {{ section.settings.faq_title | escape }}
+  </h2>
   
   {% if section.settings.faq_description %}
     <div class="rte faq-description">
